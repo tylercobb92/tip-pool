@@ -12,5 +12,9 @@ describe("payment info (with setup and teardown)", function () {
     afterEach(function () {
         billAmtInput.value = '';
         tipAmtInput.value = '';
+        paymentTbody.innerHTML = '';
+        summaryTds[0].innerHTML = "";
+        summaryTds[1].innerHTML = "";
+        summaryTds[2].innerHTML = "";
     })
 })
