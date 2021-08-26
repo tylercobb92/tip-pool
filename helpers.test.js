@@ -39,6 +39,14 @@ describe("payment info (with setup and teardown)", function () {
         expect(newTr.children.length).toEqual(1);
     })
 
+    it('should append a delete button with an X to tr on appendDeleteBtn()', function () {
+        let newTr = document.createElement('tr');
+        appendDeleteBtn(newTr);
+
+        expect(newTr.children.length).toEqual(1);
+        expect(newTr.firstChild.innerText).toEqual('X');
+    })
+
     afterEach(function () {
         billAmtInput.value = '';
         tipAmtInput.value = '';
